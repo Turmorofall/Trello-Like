@@ -9,7 +9,7 @@
         <li class="tab"><a href="#/critiques">Tâches critiques</a></li>
         <li class="tab"><a href="#/masquees">Tâches masquées</a></li>
         <li id="iconNotif" class="right"><i class="small material-icons">chat_bubble_outline</i></li>
-        <li id="averagetime" class="right">Durée moyenne : {{timeaverage}}</li>
+        <li id="averagetime" class="right">Durée moyenne : {{time}}</li>
       </ul>
     </div>
   </nav>
@@ -25,19 +25,19 @@ export default {
   data () {
     return {
       todolist: Store.datas,
-      timeaverage: 0,
     }
   },
   // afficher le temps moyen
-  // computed:{
-  //   todolist: function(){
-  //     console.log(this.todolist.todos.length);
-  //     this.todolist.todos.forEach(function(element) {
-  //       this.timeaverage += element;
-  //     }, this);
-  //     this.timeaverage = this.timeaverage/this.todolist.todos.length;
-  //   }
-  // }
+  computed:{
+    time: function(){
+      let timeaverage = 0;
+      this.todolist.todos.forEach(function(element) {
+        timeaverage += element.duration;
+      });
+      timeaverage = timeaverage/this.todolist.todos.length;
+      return timeaverage;
+    }
+  }
 }
 </script>
 

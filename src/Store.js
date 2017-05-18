@@ -34,7 +34,7 @@ export const Store = {
 				id: 5,
 				todo: 'Vendre mon âme',
 				criticity: 5,
-				duration: 1,
+				duration: 2,
 				visibility: false,
 			},
 			{
@@ -62,7 +62,7 @@ export const Store = {
 				id: 9,
 				todo: 'acheter du pain',
 				criticity: 5,
-				duration: 1,
+				duration: 3,
 				visibility: false,
 			},
 			{

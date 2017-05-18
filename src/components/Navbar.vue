@@ -35,7 +35,7 @@ export default {
         timeaverage += element.duration;
       });
       timeaverage = timeaverage/this.todolist.todos.length;
-      return timeaverage;
+      return Math.round(timeaverage);
     }
   }
 }

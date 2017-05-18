@@ -12,7 +12,7 @@
       </div>
       <div class="row">
         <div class="input-field col s4">
-						<label>Criticité</label>
+						<p><label id="criticLabel">Criticité</label></p>
 						<p class="range-field">
 							<input type="range" id="test5" min="0" max="10" v-model.number="newTask.criticity"/>
 						</p>
@@ -49,7 +49,7 @@ export default {
 				todo: '',
 				criticity: 0,
 				duration: 0,
-				visibility: null,
+				visibility: true,
 			}
     }
   },
@@ -60,7 +60,7 @@ export default {
 				todo: '',
 				criticity: 0,
 				duration: 0,
-				visibility: null,
+				visibility: true,
 			}
 		}
 	}
@@ -71,11 +71,17 @@ export default {
 .input-field{
 	margin: 0;
 }
+.switch{
+	text-align: center;
+}
 .icon{
 	margin: 0.5em auto 0.5em auto;
 	padding: 0;
 }
 i{
 	margin: 0 auto 0 auto;
+}
+#criticLabel{
+	margin-bottom: 0.5em;
 }
 </style>
